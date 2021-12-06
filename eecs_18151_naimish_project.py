@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import pickle
+import sys
 
 data = pd.read_csv("C:/Users/naimi/OneDrive/Desktop/Python Final Project/Crop_recommendation.csv")
 
