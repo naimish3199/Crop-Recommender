@@ -21,4 +21,3 @@ pickle.dump(GNB,open('model.pkl','wb'))
 
 # Loading model to compare the results
 model = pickle.load(open('model.pkl','rb'))
-print(model.predict([[56, 69, 53,25.4,82,7,200]]))
