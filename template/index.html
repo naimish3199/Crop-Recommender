@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommender</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+
+
+
+
+<body style="background-color:#98AFC7;">
+
+ <div class="login">
+	<center><h1>Crop Recommender</h1><center>
+
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<center><input type="number" name="Nitrogen" placeholder="% Nitrogen in soil" required="required"  step="0.01" min="0"/><br><center>
+        <input type="number" name="Phosphorous" placeholder="% Phosphorous in soil" required="required"  step="0.01" min="0"/><br>
+		<input type="number" name="Potassium" placeholder="% Potassium in soil" required="required"  step="0.01" min="0"/><br>
+		<input type="number" name="Temperature" placeholder="Temperature(in ℃)" required="required"  step="0.01" min="-50" max = "60"/><br>
+        <input type="number" name="relative_humidity" placeholder="Relative Humidity(in %)" required="required"   step="0.01" min="0" max = "100"/><br>
+		<input type="number" name="ph" placeholder="Ph" required="required"  step="0.01" min="0" max="14"/><br>
+		<input type="number" name="rainfall" placeholder="Rainfall(in mm)" required="required"  step="0.01" min="0" /><br>
+
+        <button type="submit" class="button button1">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   <b> <font size="+2.5">{{ prediction_text }}</font> <b>
+   <br>
+   <br>
+   <br>
+   <br>
+   <b> <font size="+2">Naimish Sharma</font> <b>
+   <br>
+   <b> <font size="+2">18151</font> <b>
+  
+ </div>
+
+
+</body>
+</html>
